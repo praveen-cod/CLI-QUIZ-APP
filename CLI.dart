@@ -4,6 +4,7 @@ void main(){
  QUIZ.cli_quiz();
 }
 class CLI{
+  
     List<dynamic> quest = [
 "Which company originally developed Java?",
 "What is the default return type of the main method in Java?",
@@ -34,7 +35,8 @@ class CLI{
       print("--------CLI QUIZ CONTEST--------");
       int ? n = quest.length;
       for(int i = 0;i<n;i++){
-        print("Q${i+1}. {${quest[i].shuffle()} ""\n");
+        quest.shuffle;
+        print("Q${i+1}. ${quest[i]} ""\n");
       for(var choice in option[i]){
         print(choice);
       }
@@ -50,7 +52,7 @@ class CLI{
         print("Wrong answer-The Correct answer is ${correctAnswers[i]} ""\n");
       }
       }
-      print("Your Score Out of 10 $score/${quest.length}");
+      print("Your Score is : $score /${quest.length}\n");
       if(score >= 8){
         print("Excellent Great Work");
       }
