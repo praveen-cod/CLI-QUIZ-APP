@@ -35,7 +35,6 @@ class CLI{
       print("--------CLI QUIZ CONTEST--------");
       int ? n = quest.length;
       for(int i = 0;i<n;i++){
-        quest.shuffle;
         print("Q${i+1}. ${quest[i]} ""\n");
       for(var choice in option[i]){
         print(choice);
